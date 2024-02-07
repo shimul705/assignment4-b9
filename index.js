@@ -15,14 +15,19 @@
 
 function checkName(name) {
   //write your code here
-  const nameCase = name.toLowerCase();
+  // name = 5484;
+  if (typeof name !== 'string' || name === 'typeof') {
+    return "invalid";
+  }
+
+  console.log(typeof name);
+  let nameCase = name.toLowerCase();
   // console.log(nameCase);
+  nameCase = nameCase.trim();
 
   const nameLastLetter = nameCase.slice(-1);
   // console.log(nameLastLetter);
-  if (typeof name !== 'string') {
-    return "Invalid Input! Please Enter String only";
-  }
+
   const nameCheckWith = ['a', 'y', 'e', 'i', 'o', 'u', 'w'];
 
   if (nameCheckWith.includes(nameLastLetter)) {
@@ -32,4 +37,4 @@ function checkName(name) {
     return "It's a Bad Name";
   }
 }
-console.log(checkName("Shimul"));
+console.log(checkName('sdkhakd'));
