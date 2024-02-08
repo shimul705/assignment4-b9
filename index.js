@@ -12,7 +12,7 @@ function calculateMoney(ticketSale) {
 
 console.log(calculateMoney(10));
 console.log(calculateMoney(1055));
-console.log(calculateMoney('93'));
+console.log(calculateMoney(93));
 console.log(calculateMoney(-130));
 console.log('=======================================');
 
@@ -23,13 +23,10 @@ function checkName(name) {
   if (Array.isArray(name) || typeof name[0] !== 'string') {
     return "Invalid"
   }
-  // console.log(typeof name);
   let nameCase = name.toLowerCase();
-  // console.log(nameCase);
   nameCase = nameCase.trim();
 
   const nameLastLetter = nameCase.slice(-1);
-  // console.log(nameLastLetter);
 
   const nameCheckWith = ['a', 'y', 'e', 'i', 'o', 'u', 'w'];
 
@@ -41,9 +38,8 @@ function checkName(name) {
   }
 }
 console.log(checkName('Salman'));
-console.log(checkName('RAFEE'));
+console.log(checkName(' OISHE  '));
 console.log(checkName('Jhankar'));
-console.log(checkName('199'));
 console.log(checkName(199));
 console.log(checkName(['Rashed']));
 console.log('=======================================');
@@ -73,23 +69,20 @@ console.log('=======================================');
 // ==================================4==================================
 
 function password(obj) {
-  //write your code here
-  if (Array.isArray(obj) || typeof obj !=='object' ||!obj.name || !obj.birthYear || obj.birthYear.toString().length !== 4 || typeof obj.birthYear !== 'number' || !obj.siteName) {
+  if (Array.isArray(obj) || typeof obj !== 'object' || !obj.name || !obj.birthYear || obj.birthYear.toString().length !== 4 || typeof obj.birthYear !== 'number' || !obj.siteName) {
     return "invalid"
   }
 
   let uCaseSiteName = obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1);
-  // console.log(uCaseSiteName);
   let UpdatedPassword = uCaseSiteName + '#' + obj.name + '@' + obj.birthYear;
   return UpdatedPassword;
 }
 
-console.log(password({ name: 'kolimuddin', birthYear: 'hvjj', siteName: 'google' }));
+
 console.log(password({ name: 'kolimuddin', birthYear: 1999, siteName: 'google' }));
 console.log(password({ name: 'rahat', birthYear: 2002, siteName: 'Facebook' }));
 console.log(password({ name: 'toky', birthYear: 200, siteName: 'Facebook' }));
 console.log(password({ name: 'maisha', birthYear: 2002 }));
-console.log(password(['kolimuddin', 'birthYear: 1999', 'siteName: google' ]));
 
 console.log('=======================================');
 
@@ -97,17 +90,12 @@ console.log('=======================================');
 
 
 function monthlySavings(arr, livingCost) {
-
-  // You have to write your code here
   if (!Array.isArray(arr)) {
     return "invalid input! First parameter is not array"
   } else if (typeof livingCost !== 'number') {
     return "invalid input! Second parameter is not Number"
   }
 
-  // if (!Array.isArray(arr) || typeof livingCost !== 'number') {
-  //   return 'invalid input'
-  // }
   let AllPayments = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] >= 3000) {
@@ -117,7 +105,7 @@ function monthlySavings(arr, livingCost) {
       AllPayments += arr[i];
     }
   }
-  // console.log(AllPayments);
+
   let TotalSavings = 0;
   TotalSavings = AllPayments - livingCost;
 
@@ -127,15 +115,13 @@ function monthlySavings(arr, livingCost) {
   else if (TotalSavings < 0) {
     return "Earn More!"
   }
-  else{
+  else {
     return "Invalid"
   }
 
 }
-console.log(monthlySavings([ 1000 , 2000 , 3000 ] , 5400));
-console.log(monthlySavings([ 900 , 2700 , 3400], [ 900 , 2700 , 3400]));
-console.log(monthlySavings([ 1000 , 2000 , 2500 ] , 5000));
-console.log(monthlySavings([ 900 , 2700 , 3400] , 10000));
-console.log(monthlySavings(100, [ 900 , 2700 , 3400]));
-console.log(monthlySavings([ 900 , 2700 , 3400], [ 900 , 2700 , 3400]));
+console.log(monthlySavings([1000, 2000, 3000], 5400));
+console.log(monthlySavings([1000, 2000, 2500], 5000));
+console.log(monthlySavings([900, 2700, 3400], 10000));
+console.log(monthlySavings(100, [900, 2700, 3400]));
 console.log('=======================================');
