@@ -13,28 +13,34 @@
 // const result = calculateMoney(10);
 // console.log(result);
 
-function checkName(name) {
-  //write your code here
-  // name = 5484;
-  if (typeof name !== 'string' || name === 'typeof') {
-    return "invalid";
-  }
 
-  console.log(typeof name);
-  let nameCase = name.toLowerCase();
-  // console.log(nameCase);
-  nameCase = nameCase.trim();
 
-  const nameLastLetter = nameCase.slice(-1);
-  // console.log(nameLastLetter);
+// function checkName(name) {
+//   //write your code here
+//   // name = 5484;
+//   // if (typeof name !== 'string' || name === 'typeof') {
+//   //   return "invalid";
+//   // }
+//   if (Array.isArray(name) || typeof name[0] !== 'string') {
+//     return "Invalid"
+//   }
 
-  const nameCheckWith = ['a', 'y', 'e', 'i', 'o', 'u', 'w'];
+//   // console.log(typeof name);
+//   let nameCase = name.toLowerCase();
+//   // console.log(nameCase);
+//   nameCase = nameCase.trim();
 
-  if (nameCheckWith.includes(nameLastLetter)) {
-    return "It's a Good Name";
-  }
-  else {
-    return "It's a Bad Name";
-  }
-}
-console.log(checkName('sdkhakd'));
+//   const nameLastLetter = nameCase.slice(-1);
+//   // console.log(nameLastLetter);
+
+//   const nameCheckWith = ['a', 'y', 'e', 'i', 'o', 'u', 'w'];
+
+//   if (nameCheckWith.includes(nameLastLetter)) {
+//     return "It's a Good Name";
+//   }
+//   else {
+//     return "It's a Bad Name";
+//   }
+// }
+// console.log(checkName(['Rashed']));
+
